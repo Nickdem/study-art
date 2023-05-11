@@ -124,3 +124,45 @@ button {
     opacity: 1;
   }
 }
+
+.toLeft {
+  animation: toLeft 0.5s ease-in;
+}
+
+@keyframes toLeft {
+  from {
+    transform: translateX(-1000px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.toRight {
+  animation: toRight 0.5s ease-in;
+}
+
+@keyframes toRight {
+  from {
+    transform: translateX(1000px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.toDown {
+  animation: toDown 0.5s ease-in;
+}
+
+@keyframes toDown {
+  from {
+    transform: translateY(1000px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

@@ -5,6 +5,10 @@
   background-color: @pink-bg;
   .paddings(@t: 9em, @b: 9em);
 
+  &__inner {
+    overflow: hidden;
+  }
+
   &__block {
     .positions(@p: relative);
 
@@ -36,7 +40,22 @@
 }
 
 .slider {
+  .positions(@p: relative);
+
+  &__btn {
+    background: transparent;
+  }
+
+  &__btn.prev {
+    .positions(@p: absolute, @t: 50%, @l: 0);
+    z-index: 10;
+  }
+  &__btn.next {
+    .positions(@p: absolute, @t: 50%, @r: 0);
+    z-index: 10;
+  }
   &__item {
     .flexContainer(@jc: space-around);
+    .paddings(@b: 2em);
   }
 }
