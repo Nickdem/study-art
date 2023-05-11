@@ -1,0 +1,68 @@
+@import "colors.less";
+@import "mixins.less";
+
+.calc {
+  &__content {
+    .flexContainer(@jc: space-between);
+  }
+
+  &__description {
+    .sizes(@w: 402px);
+  }
+
+  &__form {
+    .sizes(@w: 402px);
+
+    & h4 {
+      .textOptions(2em, 1em, 700);
+      .margins(@b: 3em);
+    }
+
+    & select {
+      opacity: 0.6;
+      .textOptions(2em, 1em, 400);
+      appearance: none;
+      display: block;
+      .paddings(@t: 1em, @b: 1em);
+      border: none;
+      .margins(@l: 3em);
+    }
+
+    & input {
+      opacity: 0.6;
+      .textOptions(2em, 1em, 400);
+      appearance: none;
+      display: block;
+      .paddings(@t: 1em, @b: 1em);
+      border: none;
+      .margins(@l: 3em);
+    }
+
+   
+  }
+
+  &__upload {
+    .positions(@p: relative);
+    .flexContainer(@jc: space-between);
+
+    & input {
+      opacity: 0;
+      .positions(@p: absolute, @l: 0, @t: 0);
+      .sizes(100%, 100%);
+      letter-spacing: 10em;
+      cursor: pointer;
+    }
+  }
+
+  &__price {
+    background-color: @pink-bg;
+    .paddings(@t: 4em, @b: 4em, @l: 6em, @r: 6em);
+    .sizes(100%);
+    position: relative;
+  }
+
+  &__btn {
+    display: block;
+    .margins(@t: 4em, @l: auto, @r: auto);
+  }
+}

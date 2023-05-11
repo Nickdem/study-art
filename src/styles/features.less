@@ -1,0 +1,22 @@
+@import "colors.less";
+@import "mixins.less";
+
+.features {
+    &__list {
+        .margins(@t: 2em, @b: 2em);
+        .flexContainer(@jc: space-between, @fw: wrap, @g: 2em);
+    }
+
+    &__item {
+        max-width: 30%;
+        .positions(@p: relative);
+
+        & img {
+            .positions(@p: absolute, @t: -6em, @l: -6em);
+        }
+
+        & h4 {
+            .textOptions(1.8em, 1em, 400);
+        }
+    }
+}

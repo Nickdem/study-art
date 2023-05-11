@@ -1,0 +1,111 @@
+@import "colors.less";
+@import "mixins.less";
+
+.header {
+  &__inner {
+    .flexContainer(@jc: space-between);
+  }
+
+  &__block {
+    .positions(@p: relative);
+  }
+
+  &__list {
+    .flexContainer(@jc: space-between, @g: 1em);
+
+    & > li {
+      .positions(@p: relative);
+      .paddings(@t: 2em, @b:2em, @r: 1.5em, @l:1.5em);
+
+      &::after {
+        content: "";
+        background-image: url(../img/down-arrow.svg);
+        .positions(@p: absolute, @r: 0, @t: 2.2em);
+        .sizes(12px, 10px);
+        background-size: 100%;
+        display: inline-block;
+      }
+    }
+    & a {
+      .textOptions(1.5em, 1em, 700);
+    }
+  }
+
+  &__list > li:hover &__list-sub {
+    display: flex;
+  }
+
+  &__list-sub {
+    .positions(@p: absolute, @l: 0, @r: 0);
+    background-color: white;
+    z-index: 10;
+    .paddings(@t: 0, @b: 0, @r: 0, @l:0);
+    .margins(@t: 0, @b: 0, @r: 0, @l:0);
+    .sizes(@w: 100%);
+    .flexContainer(@jc: space-between, @fd: column, @ai: flex-start, @g: 1em);
+    display: none;
+
+    & li {
+      .paddings(@t: 2em, @b:2em, @r: 2em, @l:2em);
+    }
+
+    & a {
+      .textOptions(1.5em, 1em, 700);
+
+      &:hover,
+      &:focus {
+        background-color: @questions-bg;
+      }
+    }
+  }
+
+  &__btn {
+    .flexContainer(@jc: space-between, @g: 1em);
+
+    & img {
+      .sizes(1.5em, 1.5em);
+    }
+  }
+}
+
+.burger-btn {
+  .paddings(@t: 1em, @b: 1em, @r: 1.5em, @l:1.5em);
+  background-color: @button;
+  color: white;
+  .flexContainer(@jc: space-between, @g: 1em);
+
+  & img {
+    .sizes(@w: 2em, @h: 2em);
+  }
+
+  & span {
+    .textOptions(1.5em, 1em, 700);
+  }
+}
+
+.burger-navigation {
+  .positions(@p: absolute, @l: 0, @r: 0);
+  background-color: white;
+  z-index: 10;
+  .paddings(@t: 0, @b: 0, @r: 0, @l:0);
+  .margins(@t: 0, @b: 0, @r: 0, @l:0);
+  .sizes(@w: 100%);
+  display: none;
+}
+
+.burger-list {
+  .flexContainer(@jc: space-between, @fd: column, @ai: flex-start, @g: 1em);
+
+  & li {
+    .paddings(@t: 2em, @b:2em, @r: 2em, @l:2em);
+  }
+
+  & a {
+    .textOptions(1em, 1em, 400);
+
+    &:hover,
+    &:focus {
+      background-color: @questions-bg;
+    }
+  }
+}

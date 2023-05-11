@@ -1,0 +1,29 @@
+@import "colors.less";
+@import "mixins.less";
+
+.consultation {
+  .paddings(@t: 10em, @b: 10em);
+  background-color: @pink-bg;
+
+  &__form {
+    & div {
+      .flexContainer(@jc: space-between, @fw: wrap, @g: 3em);
+    }
+
+    & button {
+      display: block;
+      .margins(@t: 1em, @l: auto, @r: auto);
+    }
+
+    & input {
+      .sizes(@w:30%);
+      .paddings(@b: 1.5em, @t: 1.5em, @l: 4em, @r: 4em);
+      border: none;
+      border-radius: 50px;
+
+      &:last-child {
+        .sizes(@w:100%);
+      }
+    }
+  }
+}

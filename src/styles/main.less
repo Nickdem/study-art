@@ -1,0 +1,83 @@
+@import "colors.less";
+@import "mixins.less";
+
+.main {
+  &__header {
+    .flexContainer(@jc: space-between);
+
+    & img {
+      .sizes(2em, 2em);
+    }
+  }
+
+  &__logo {
+    p:first-child {
+      .textOptions(2.5em, 1em, 400);
+      color: @button;
+      text-transform: uppercase;
+    }
+
+    p:last-child {
+      .textOptions(1.5rem, 1em, 400);
+      .sizes(20em);
+    }
+  }
+
+  &__phone {
+    p:first-child {
+      .flexContainer(@jc: space-between, @g: 0.6em);
+      .textOptions(2.5em, 1em, 400);
+      text-align: right;
+      .margins(@b: 0.4em);
+    }
+
+    p:last-child {
+      .flexContainer(@jc: space-between);
+      .textOptions(1.6em, 1em, 400);
+      text-align: right;
+    }
+  }
+
+  &__content {
+    .flexContainer(@jc: space-between);
+  }
+
+  &__subtitle {
+    .margins(@t: 9em);
+  }
+
+  &__title {
+    .margins(@b: 7em);
+  }
+
+  &__features {
+    .flexContainer(@jc: space-between, @fw: wrap, @g: 0.4em);
+    .margins(@b: 3em);
+
+    & p {
+      .flexContainer(@jc: space-between,  @g: 0.6em);
+      .textOptions(1.2em, 1em, 400);
+    }
+
+    & img {
+      .sizes(1.4em,1.4em);
+    }
+  }
+
+  &__subbtn {
+    text-align: center;
+    color: @button;
+    .textOptions(1.4em, 1em, 400);
+    .margins(@b: 3em);
+  }
+
+  &__btn {
+    .positions(@p: relative);
+    display: block;
+    .margins(@r: auto, @l: auto);
+
+    & img {
+      .positions(@p: absolute, @r: -6em,@t: -1em);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.textOptions(@s, @lh, @fw: 400) {
+  font-size: @s;
+  line-height: @lh;
+  font-weight: @fw;
+}
+
+.flexContainer(@jc, @fd: row, @fw: nowrap, @g: normal, @ai: center) {
+  display: flex;
+  align-items: @ai;
+  flex-direction: @fd;
+  justify-content: @jc;
+  flex-wrap: @fw;
+  row-gap: @g;
+  column-gap: @g;
+}
+
+.sizes (@w: auto, @h: auto) {
+  width: @w;
+  height: @h;
+}
+
+.margins (@t: 0, @r: 0, @b: 0, @l: 0) {
+  margin-top: @t;
+  margin-right: @r;
+  margin-bottom: @b;
+  margin-left: @l;
+}
+
+.paddings (@t: 0, @r: 0, @b: 0, @l: 0) {
+  padding-top: @t;
+  padding-right: @r;
+  padding-bottom: @b;
+  padding-left: @l;
+}
+
+.positions (@p, @t: auto, @r: auto, @b: auto, @l: auto) {
+  position: @p;
+  top: @t;
+  right: @r;
+  bottom: @b;
+  left: @l;
+}

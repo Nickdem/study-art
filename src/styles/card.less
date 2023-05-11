@@ -1,0 +1,25 @@
+@import "colors.less";
+@import "mixins.less";
+
+.card {
+  &__block {
+    .margins(@t: 7em);
+    .paddings(@t: 5em);
+    .flexContainer(@jc: space-around, @ai: flex-start);
+    background-color: @pink-bg;
+  }
+
+  &__description {
+    .sizes(@w: 45%);
+    .margins(@t: 2em);
+
+    & h3 {
+        .textOptions(3.5em, 1em, 400);
+        .margins(@b: 1em);
+    }
+    & p {
+        .margins(@b: 3em);
+    }
+
+  }
+}

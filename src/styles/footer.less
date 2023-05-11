@@ -1,0 +1,33 @@
+@import "colors.less";
+@import "mixins.less";
+
+.footer {
+  .paddings(@t: 4em, @b: 3em);
+
+  &__inner {
+    .flexContainer(@jc: space-between);
+  }
+
+  &__left {
+    .flexContainer(@jc: space-between, @ai: flex-start, @g: 2em);
+
+    & div {
+      .flexContainer(@jc: space-between, @fd: column, @ai: flex-start, @g: 2em);
+    }
+
+    & p {
+      text-align: left;
+      .textOptions(1.6em, 1em, 400);
+    }
+  }
+
+  &__right {
+    & p:first-child {
+      .textOptions(2.6em, 1.4em, 400);
+    }
+
+    & p:nth-child(2) {
+      .textOptions(1.8em, 1.4em, 400);
+    }
+  }
+}

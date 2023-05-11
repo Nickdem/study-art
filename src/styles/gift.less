@@ -1,0 +1,41 @@
+@import "colors.less";
+@import "mixins.less";
+
+.gift {
+  background: url(http://localhost:3000/assets/gift-bg.jpg) no-repeat;
+  background-size: 1080;
+  background-position-x: 60%;
+
+  &__inner {
+    .paddings(@t: 9em);
+  }
+
+  & h3 {
+    .textOptions(3.5em, 1em, 700);
+  }
+
+  &__text {
+    max-width: 50%;
+    margin: 6rem 0 9rem 0;
+    font-size: 1.8rem;
+    .margins(@t: 6em, @b: 6em);
+  }
+
+  &__features {
+    max-width: 50%;
+    .flexContainer(@jc: space-between);
+  }
+
+  &__feature {
+    max-width: 150px;
+    .positions(@p: relative);
+
+    & img {
+      .positions(@p: absolute, @t: -2.5em, @l: -2em);
+    }
+
+    & h4 {
+        .textOptions(1.8em, 1em, 400)
+    }
+  }
+}

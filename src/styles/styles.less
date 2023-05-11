@@ -1,0 +1,39 @@
+@import "colors.less";
+@import "mixins.less";
+
+.styles {
+  .positions(@p: relative);
+  .paddings(@b: 10em);
+
+  &__decoration {
+    .positions(@p: absolute, @b: -30em, @l: 0);
+  }
+
+  &__list {
+    .flexContainer(@jc: space-between, @g: 3em);
+    .margins(@b: 3em);
+  }
+
+  &__block {
+    .paddings(@b: 5em, @t: 5em, @r: 5em, @l: 5em);
+    background-color: @pink-bg;
+
+    & img {
+      .margins(@b: 2em);
+    }
+
+    & a {
+      text-decoration: underline;
+      color: @button;
+    }
+  }
+
+  &__button {
+    .flexContainer(@jc: space-between, @g: 0.6em);
+    .margins(@r: auto, @l: auto);
+
+    & img {
+      .sizes(1.6rem,1.6rem);
+    }
+  }
+}

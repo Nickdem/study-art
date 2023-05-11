@@ -1,0 +1,49 @@
+@import "colors.less";
+@import "mixins.less";
+
+.sizes {
+  .paddings(@t: 9em, @b: 20em);
+  background: url(http://localhost:3000/assets/sizes-bg.jpg) no-repeat center;
+  background-size: 1080;
+
+  &__list {
+    .margins(@t: 3em);
+    .flexContainer(@jc: space-between, @ai: flex-start);
+  }
+
+  &__block {
+    .positions(@p: relative);
+
+    & p {
+      .sizes(@w: 100%);
+    }
+  }
+
+  &__title {
+    color: #86b7d2;
+    .textOptions(2em, 1em, 700);
+    .positions(@p: absolute, @t: 25px);
+  }
+
+  &__old-price {
+    .textOptions(1em, 1em, 700);
+    .positions(@p: absolute, @b: 7em);
+    text-decoration: line-through;
+  }
+
+  &__new-price {
+    .textOptions(2em, 1em, 700);
+    .positions(@p: absolute, @b: 2em);
+  }
+
+  &__hit {
+    max-width: 150px;
+    .positions(@p: absolute, @l: 54%);
+    transform: translateX(-50%);
+    background-color: #f99300;
+    color: white;
+    .textOptions(1.2em, 1em, 400);
+    text-transform: uppercase;
+    .paddings(@t: 1.6em, @b: 1.6em);
+  }
+}

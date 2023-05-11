@@ -1,0 +1,43 @@
+@import "colors.less";
+@import "mixins.less";
+
+.feedback {
+  background-color: @pink-bg;
+  .paddings(@t: 9em, @b: 9em);
+
+  &__block {
+    .positions(@p: relative);
+
+    & > img {
+      .sizes(400px, 400px);
+    }
+
+    & button {
+      .positions(@p: absolute, @b: -1em, @r: 1em);
+      .flexContainer(@jc: space-between, @g: 1em);
+
+      & img {
+        .sizes(2em, 2em);
+      }
+    }
+  }
+
+  &__info {
+    max-width: 40%;
+  }
+
+  &__heading {
+    .margins(@b: 1em);
+  }
+
+  &__text {
+    .margins(@b: 2em);
+
+  }
+}
+
+.slider {
+  &__item {
+    .flexContainer(@jc: space-around);
+  }
+}

@@ -1,0 +1,16 @@
+@import "colors.less";
+@import "mixins.less";
+
+.promo {
+  .positions(@p:relative);
+  .paddings(@t: 10em, @b: 10em);
+
+  &__inner {
+    .flexContainer(@jc: space-between, @g: 3em);
+  }
+
+  &__decoration {
+    max-width: 30%;
+    .positions(@p:absolute, @b: -14em, @r: 0);
+  }
+}

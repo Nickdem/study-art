@@ -1,0 +1,18 @@
+@import "colors.less";
+@import "mixins.less";
+
+.scheme {
+  &__list {
+    .margins(@t: 2em, @b: 2em);
+    .flexContainer(@jc: space-between, @fw: wrap, @g: 4em);
+  }
+
+  &__block {
+    max-width: 30%;
+
+    & p {
+        .margins(@t: 1em);
+      .textOptions(1.8em, 1.4em, 400);
+    }
+  }
+}
