@@ -86,7 +86,8 @@ button {
     border-radius: 4px;
     .paddings(@t: 3em, @b: 4em, @r: 4em, @l: 4em);
 
-    & input, & textarea {
+    & input,
+    & textarea {
       .sizes(@w:100%);
       .paddings(@b: 1.5em, @t: 1.5em, @l: 4em, @r: 4em);
       border: none;
@@ -95,9 +96,8 @@ button {
       text-align: center;
     }
 
-    & form  button {
+    & form button {
       .margins(@t: 2em);
-
     }
 
     & img {
@@ -108,5 +108,19 @@ button {
   &__close {
     .positions(@p: absolute, @t: 1em, @r: 1em);
     .textOptions(2em, 1em, 700);
+  }
+}
+
+.faded {
+  animation: faded 0.5s ease-in;
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
   }
 }

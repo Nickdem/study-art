@@ -1,5 +1,8 @@
 import "./index.html";
 import "./index.less";
-import init from "./scripts/main";
+import modals from "./scripts/modals";
 
-init();
+window.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+  modals();
+});
