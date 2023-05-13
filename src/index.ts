@@ -1,5 +1,6 @@
 import "./index.html";
 import "./index.less";
+import forms from "./scripts/forms";
 import modals from "./scripts/modals";
 import sliders from "./scripts/sliders";
 
@@ -8,4 +9,5 @@ window.addEventListener("DOMContentLoaded", function () {
   modals();
   sliders(".slider__item", "", ".slider__btn.prev", ".slider__btn.next");
   sliders(".main__slider > div", "vertical");
+  forms();
 });
