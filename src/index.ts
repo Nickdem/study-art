@@ -3,6 +3,7 @@ import "./index.less";
 import forms from "./scripts/forms";
 import mask from "./scripts/mask";
 import modals from "./scripts/modals";
+import showMoreStyles from "./scripts/moreStyles";
 import sliders from "./scripts/sliders";
 import textInputs from "./scripts/txtInputs";
 
@@ -15,4 +16,5 @@ window.addEventListener("DOMContentLoaded", function () {
   mask('[name="phone"]');
   textInputs('[name="name"]');
   textInputs('[name="message"]');
+  showMoreStyles(".styles__button", ".styles__block");
 });
