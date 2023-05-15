@@ -16,10 +16,10 @@ export default function forms() {
   };
 
   const clearInputs = () => {
-    inputs.forEach((item) => {
+    inputs.forEach(function (item) {
       item.value = "";
     });
-    upload.forEach((item) => {
+    upload.forEach(function (item) {
       item.previousElementSibling.textContent = "Файл не выбран";
     });
   };
@@ -39,8 +39,9 @@ export default function forms() {
   }
 
   upload.forEach((item) => {
-    item.addEventListener("input", () => {
+    item.addEventListener("input", function () {
       console.log(item.files[0]);
+
       let dots;
       const arr = item.files[0].name.split(".");
 
@@ -51,7 +52,7 @@ export default function forms() {
   });
 
   form.forEach((item) => {
-    item.addEventListener("submit", (e) => {
+    item.addEventListener("submit", function (e) {
       e.preventDefault();
 
       const statusMessage = document.createElement("div");
@@ -61,7 +62,7 @@ export default function forms() {
         statusMessage.classList.add("calc__form");
       }
 
-      setTimeout(() => {
+      setTimeout(function () {
         item.style.display = "none";
         item.insertAdjacentElement("afterend", statusMessage);
       }, 400);
@@ -96,7 +97,7 @@ export default function forms() {
         })
         .finally(function () {
           clearInputs();
-          setTimeout(() => {
+          setTimeout(function () {
             statusMessage.remove();
             item.style.display = "block";
           }, 5000);
