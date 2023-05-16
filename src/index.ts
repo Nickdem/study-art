@@ -8,6 +8,7 @@ import showMoreStyles from "./scripts/moreStyles";
 import sliders from "./scripts/sliders";
 import portfolioFilter from "./scripts/portfolioFilter";
 import textInputs from "./scripts/txtInputs";
+import sizesImg from "./scripts/sizesImg";
 
 window.addEventListener("DOMContentLoaded", function () {
   "use strict";
@@ -22,4 +23,5 @@ window.addEventListener("DOMContentLoaded", function () {
   sliders(".slider__item", "", ".slider__btn.prev", ".slider__btn.next");
   sliders(".main__slider > div", "vertical");
   portfolioFilter(".portfolio__menu-item", ".portfolio__block");
+  // sizesImg('.sizes__block')
 });

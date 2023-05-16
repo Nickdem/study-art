@@ -3,7 +3,7 @@
 
 .sizes {
   .paddings(@t: 9em, @b: 20em);
-  background: url(http://localhost:3000/assets/sizes-bg.jpg) no-repeat center;
+  background: url(../img/sizes-bg.jpg) no-repeat center;
   background-size: 1080;
 
   &__list {
@@ -13,6 +13,59 @@
 
   &__block {
     .positions(@p: relative);
+    transition: all 0.5s ease;
+
+    &:first-child {
+      .sizes(158px, 187px);
+      background: url(../img/sizes-1.png) no-repeat;
+
+      &:hover {
+        background: url(../img/sizes-1-1.png) no-repeat;
+
+        p:not(.sizes__hit) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .sizes(186px, 245px);
+      background: url(../img/sizes-2.png) no-repeat;
+
+      &:hover {
+        background: url(../img/sizes-2-1.png) no-repeat;
+
+        p:not(.sizes__hit) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .sizes(245px, 245px);
+      background: url(../img/sizes-3.png) no-repeat;
+
+      &:hover {
+        background: url(../img/sizes-3-1.png) no-repeat;
+
+        p:not(.sizes__hit) {
+          display: none;
+        }
+      }
+    }
+
+    &:last-child {
+      .sizes(245px, 332px);
+      background: url(../img/sizes-4.png) no-repeat;
+
+      &:hover {
+        background: url(../img/sizes-4-1.png) no-repeat;
+
+        p:not(.sizes__hit) {
+          display: none;
+        }
+      }
+    }
 
     & p {
       .sizes(@w: 100%);
@@ -38,7 +91,7 @@
 
   &__hit {
     max-width: 150px;
-    .positions(@p: absolute, @l: 54%);
+    .positions(@p: absolute, @l: 54%, @b: -4em);
     transform: translateX(-50%);
     background-color: #f99300;
     color: white;
