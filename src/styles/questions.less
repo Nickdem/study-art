@@ -38,11 +38,20 @@
   }
 
   &__block {
-    .margins(@t: 6em, @l: auto, @r: auto, @b: 2em);
     background-color: @pink-bg;
-    .paddings(@t: 3em, @b: 3em, @r: 4em, @l: 4em);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     max-width: 60%;
+    transition: all 0.5s ease;
+    .margins(@t: 6em, @l: auto, @r: auto, @b: 2em);
     .positions(@p: relative);
+
+    &--show {
+      .paddings(@t: 3em, @b: 3em, @r: 4em, @l: 4em);
+      overflow: visible;
+      opacity: 1;
+    }
 
     &::before {
       content: "";

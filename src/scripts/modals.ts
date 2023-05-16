@@ -1,6 +1,5 @@
 import { getScrollWidth } from "./utils";
 
-// export default function modals(resetValues: () => void) {
 export default function modals() {
   function bindModal(
     triggerSelector: string,
