@@ -6,6 +6,7 @@ import mask from "./scripts/mask";
 import modals from "./scripts/modals";
 import showMoreStyles from "./scripts/moreStyles";
 import sliders from "./scripts/sliders";
+import portfolioFilter from "./scripts/portfolioFilter";
 import textInputs from "./scripts/txtInputs";
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -20,4 +21,5 @@ window.addEventListener("DOMContentLoaded", function () {
   calc("#size", "#material", "#options", "#promocode", ".calc__price");
   sliders(".slider__item", "", ".slider__btn.prev", ".slider__btn.next");
   sliders(".main__slider > div", "vertical");
+  portfolioFilter(".portfolio__menu-item", ".portfolio__block");
 });
