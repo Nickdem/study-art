@@ -19,6 +19,7 @@ ol {
 html {
   font-size: 10px;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -195,4 +196,9 @@ button {
   100% {
     transform: rotateY(3600deg);
   }
+}
+
+.pageup {
+  .positions(@p: fixed, @r: 2em, @b:2em);
+  transform: rotate(-90deg);
 }

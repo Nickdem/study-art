@@ -72,8 +72,8 @@
             <li>
               <a href="#">Покупателям</a>
               <ul class="burger-menu header-menu-sub">
-                <li><a href="#often-questions">Срочное изготовление</a></li>
-                <li><a href="#often-questions">Доставка и оплата</a></li>
+                <li><a href="#questions">Срочное изготовление</a></li>
+                <li><a href="#questions">Доставка и оплата</a></li>
                 <li><a href="#scheme">Схема работы</a></li>
                 <li><a href="#footer">Контакты</a></li>
               </ul>
@@ -89,7 +89,7 @@
         </div>
       </div>
     </header>
-    <header class="header faded">
+    <header id="top" class="header faded">
       <div class="wrapper header__inner">
         <div class="header__block">
           <button class="burger-btn base-button base-button--background">
@@ -141,8 +141,8 @@
             <li class="header__block">
               <a href="#">Покупателям</a>
               <ul class="header__list-sub">
-                <li><a href="#often-questions">Срочное изготовление</a></li>
-                <li><a href="#often-questions">Доставка и оплата</a></li>
+                <li><a href="#questions">Срочное изготовление</a></li>
+                <li><a href="#questions">Доставка и оплата</a></li>
                 <li><a href="#scheme">Схема работы</a></li>
                 <li><a href="#footer">Контакты</a></li>
               </ul>
@@ -335,7 +335,7 @@
       </div>
       <img class='promo__decoration' src=./img/palette.png alt>
     </section>
-    <section class="styles" id="styles" style="display: none">
+    <section class="styles" style="display: none">
       <div class="container">
         <p class="p-heading">Портрет на холсте</p>
         <h2>Популярные стили рисунка</h2>
@@ -658,7 +658,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio" id="portfolio" style="display: none">
+    <section class="portfolio" style="display: none">
       <div class="container">
         <div class="p-heading">Примеры работ</div>
         <h2>Для кого делаем портрет?</h2>
@@ -978,7 +978,7 @@
         </div>
       </div>
     </section>
-    <section class="scheme" id="scheme" style="display: none">
+    <section class="scheme" style="display: none">
       <div class="container">
         <p class="p-heading">Как мы будем с вами работать</p>
         <h2>Процесс изготовления картины</h2>
@@ -1348,7 +1348,7 @@
         </div>
       </div>
     </div>
-    <section class="often-questions" id="often-questions" style="display: none">
+    <section class="often-questions" style="display: none">
       <div class="container">
         <img class=spirt src=./img/spirt.png alt>
         <p class="p-heading">Часто задаваемые вопросы</p>
@@ -1412,7 +1412,7 @@
         <img class=brushes src=./img/brushes.png alt>
       </div>
     </section>
-    <section class="questions faded" id="often-questions">
+    <section class="questions faded" id="questions">
       <img class='questions__decoration' src=./img/spirt.png alt>
 
       <div class="questions__inner wrapper">
@@ -1568,7 +1568,7 @@
         </form>
       </div>
     </section>
-    <footer class="footer" id="footer" style="display: none">
+    <footer class="footer" style="display: none">
       <div class="container">
         <div class="col-md-8 hidden-sm hidden-xs">
           <table>
@@ -1807,6 +1807,12 @@
         </form>
       </div>
     </div>
+    <a
+      href="#top"
+      class="pageup base-button base-button--background base-button--radius base-button--text"
+      style="display: none"
+      >&#10152;</a
+    >
     <!-- <script src="script.js"></script> -->
   </body>
 </html>

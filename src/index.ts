@@ -10,6 +10,7 @@ import portfolioFilter from "./scripts/portfolioFilter";
 import textInputs from "./scripts/txtInputs";
 import sizesImg from "./scripts/sizesImg";
 import accordion from "./scripts/accordion";
+import scrolling from "./scripts/scrolling";
 
 window.addEventListener("DOMContentLoaded", function () {
   "use strict";
@@ -26,4 +27,5 @@ window.addEventListener("DOMContentLoaded", function () {
   portfolioFilter(".portfolio__menu-item", ".portfolio__block");
   // sizesImg('.sizes__block')
   accordion(".accordion__heading");
+  scrolling(".pageup");
 });
