@@ -4,19 +4,28 @@
 .features {
   &__list {
     .margins(@t: 2em, @b: 2em);
-    .flexContainer(@jc: space-between, @fw: wrap, @g: 2em);
+    .flexContainer(@jc: space-between, @fw: wrap, @g: 4em);
   }
 
   &__item {
     max-width: 30%;
     .positions(@p: relative);
 
-    & img {
-      .positions(@p: absolute, @t: -6em, @l: -6em);
-    }
-
     & h4 {
       .textOptions(1.8em, 1em, 400);
+      .margins(@l: 110px, @t: -40px);
+      .sizes(200px, 100px);
+    }
+
+    &:nth-child(5) {
+      & h4 {
+        .margins(@l: 140px, @t: -40px);
+      }
+    }
+    &:nth-child(6) {
+      & h4 {
+        .margins(@l: 140px, @t: -40px);
+      }
     }
   }
 }

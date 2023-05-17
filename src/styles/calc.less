@@ -8,6 +8,10 @@
 
   &__description {
     .sizes(@w: 402px);
+
+    & p {
+      max-width: 100%;
+    }
   }
 
   &__form {
@@ -28,7 +32,7 @@
       .margins(@l: 3em);
     }
 
-    & input {
+    & #promocode {
       opacity: 0.6;
       .textOptions(2em, 1em, 400);
       appearance: none;

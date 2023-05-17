@@ -26,6 +26,7 @@
         display: inline-block;
       }
     }
+
     & a {
       .textOptions(1.5em, 1em, 700);
     }
@@ -72,7 +73,7 @@
   .paddings(@t: 1em, @b: 1em, @r: 1.5em, @l:1.5em);
   background-color: @button;
   color: white;
-  .flexContainer(@jc: space-between, @g: 1em);
+  display: none;
 
   & img {
     .sizes(@w: 2em, @h: 2em);
@@ -80,6 +81,10 @@
 
   & span {
     .textOptions(1.5em, 1em, 700);
+  }
+
+  &:hover ~ .burger-navigation {
+    display: block;
   }
 }
 

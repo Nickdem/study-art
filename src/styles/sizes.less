@@ -4,11 +4,10 @@
 .sizes {
   .paddings(@t: 9em, @b: 20em);
   background: url(../img/sizes-bg.jpg) no-repeat center;
-  background-size: 1080;
 
   &__list {
     .margins(@t: 3em);
-    .flexContainer(@jc: space-between, @ai: flex-start);
+    .flexContainer(@jc: center, @ai: flex-start, @fw: wrap, @g: 2em);
   }
 
   &__block {

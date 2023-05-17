@@ -3,8 +3,10 @@
 
 .main {
   overflow: hidden;
+  background-color: @pink-bg;
+
   &__header {
-    .flexContainer(@jc: space-between);
+    .flexContainer(@jc: space-between, @fw: wrap);
 
     & img {
       .sizes(2em, 2em);
@@ -44,11 +46,11 @@
   }
 
   &__subtitle {
-    .margins(@t: 9em);
+    .margins(@t: 2em);
   }
 
   &__title {
-    .margins(@b: 7em);
+    .margins(@b: 1em);
   }
 
   &__features {

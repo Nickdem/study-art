@@ -7,9 +7,7 @@ export default function scrolling(upSelector: string) {
       upElem.classList.add("faded", "toRight");
     } else {
       upElem.classList.remove("faded", "toRight");
-      setTimeout(function () {
-        upElem.style.display = "none";
-      }, 500);
+      upElem.style.display = "none";
     }
   });
 }

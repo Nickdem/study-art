@@ -30,10 +30,11 @@ button {
   .positions(@p: fixed, @t: 4em, @r: 4em);
   background: transparent;
   border: none;
+  z-index: 99;
 }
 
 .wrapper {
-  .sizes(@w: 1170px);
+  max-width: 1170px;
   .paddings(@l: 15px, @r: 15px);
   .margins(@l: auto, @r: auto);
 }
@@ -65,10 +66,12 @@ button {
 
 .section-subtitle {
   .textOptions(2em, 1em, 400);
+  .margins(@t: 2em);
 }
 
 .section-title {
   .textOptions(5em, 1em, 700);
+  .margins(@b: 1em);
 }
 
 .popup {
