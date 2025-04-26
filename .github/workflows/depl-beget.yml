@@ -1,4 +1,5 @@
 name: 'Beget Deploy'
+on: push
 description: 'deploy on beget'
 runs:
   using: "composite"
