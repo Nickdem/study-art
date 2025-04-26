@@ -1,0 +1,26 @@
+name: lint
+run-name: ${{ github.actor }} pushes changes to the ${{ github.ref_name }}.
+on:
+  push:
+    branches:
+      - "to-deploy"
+      - "!gh-pages"
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.12.1"
+      - name: install dependencies
+        run: npm ci
+      - name: runing prettier
+        run: npm run prettier-check
+      - name: runing eslint
+        run: npm run lint
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+     run: |
+     echo "${{ secrets }}"
