@@ -1,39 +1,40 @@
 name: 'Beget Deploy'
 on: push
 description: 'deploy on beget'
-runs:
-  using: "composite"
-  steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: "18.12.1"
+jobs:
+  deploy:
+    using: "composite"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.12.1"
 
-    - name: install dependencies
-      run: npm ci
-    - name: build project
-      run: npm run build
+      - name: install dependencies
+        run: npm ci
+      - name: build project
+        run: npm run build
 
-    - name: Prepare to Deploy
-      run: |
-        ln -s public_html public
+      - name: Prepare to Deploy
+        run: |
+          ln -s public_html public
 
-        export user_letter=$(s='${{ secrets.REMOTE_USER }}'; echo ${s:0:1})
+          export user_letter=$(s='${{ secrets.REMOTE_USER }}'; echo ${s:0:1})
 
-        echo "PassengerNodejs ${{ secrets.TARGET }}/.local/bin/node" > .htaccess
-        echo "PassengerAppRoot ${{ secrets.TARGET }}" >> .htaccess
-        echo 'PassengerAppType node' >> .htaccess
-        echo 'PassengerStartupFile ${{ secrets.STARTUP_FILE }}' >> .htaccess
+          echo "PassengerNodejs ${{ secrets.TARGET }}/.local/bin/node" > .htaccess
+          echo "PassengerAppRoot ${{ secrets.TARGET }}" >> .htaccess
+          echo 'PassengerAppType node' >> .htaccess
+          echo 'PassengerStartupFile ${{ secrets.STARTUP_FILE }}' >> .htaccess
 
-        mkdir tmp
-        touch tmp/restart.txt
-      shell: bash
+          mkdir tmp
+          touch tmp/restart.txt
+        shell: bash
 
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SOURCE: "dist/"
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.TARGET }}
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SOURCE: "dist/"
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
