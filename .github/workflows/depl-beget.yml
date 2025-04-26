@@ -3,7 +3,6 @@ on: push
 description: 'deploy on beget'
 jobs:
   deploy:
-    using: "composite"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
